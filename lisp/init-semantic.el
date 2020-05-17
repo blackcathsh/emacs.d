@@ -8,6 +8,7 @@
 
 (global-semantic-idle-completions-mode)
 ;;(global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
+;;(setq semantic-complete-inline-anakyzer-idle-displayor-class semantic-display-tooltip)
 
 (provide 'init-semantic)
 ;; init-semantic.el ends here
