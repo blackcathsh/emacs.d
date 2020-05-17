@@ -1,14 +1,14 @@
 ;; init-semantic.el --- cedet semantic
 
-(semantic-mode)
+(defun my-semantic-hook ()
+  (semantic-mode)
+  (global-semantic-idle-summary-mode)
+  (global-semantic-idle-completions-mode)
+  (semantic-add-system-include "../include" 'c-mode)
+  (semantic-add-system-include "../include" 'c++-mode))
 
-;;(setq semanticdb-default-save-directory "~/.emacs.d/semanticdb/")
-
-(global-semantic-idle-summary-mode)
-
-(global-semantic-idle-completions-mode)
-;;(global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
-;;(setq semantic-complete-inline-anakyzer-idle-displayor-class semantic-display-tooltip)
+(add-hook 'c-mode-hook 'my-semantic-hook)
+(add-hook 'c++-mode-hook 'my-semantic-hook)
 
 (provide 'init-semantic)
 ;; init-semantic.el ends here

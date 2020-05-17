@@ -3,10 +3,16 @@
 (global-company-mode)
 
 (setq company-backends
-      '((company-dabbrev
-         company-files
-         company-keywords
-         company-semantic)))
+      '(company-bbdb
+        company-eclim
+        company-semantic
+        company-xcode
+        company-capf
+        company-files
+        (company-dabbrev-code
+         company-keywords)
+        company-oddmuse
+        company-dabbrev))
 
 (setq company-show-numbers t)
 

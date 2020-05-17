@@ -8,5 +8,7 @@
 
 (setq-default indent-tabs-mode nil)
 
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (provide 'init-else)
 ;; init-else.el ends here
