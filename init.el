@@ -8,6 +8,7 @@
 (package-initialize)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; elpa mirror source
 (require 'init-elpa)
@@ -27,6 +28,9 @@
 ;; cc mode
 (require 'init-cc-mode)
 
+;; window-numbering
+(require 'init-window-numbering)
+
 ;; some temporary unclassified configuration items
 (require 'init-else)
 
@@ -37,7 +41,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company))))
+ '(package-selected-packages (quote (markdown-mode company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
